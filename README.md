@@ -1,23 +1,15 @@
-**This is the template README. Please update this with project specific content.**
-
 # accessibility-statement-frontend-ui-tests
 
-<SERVICE_NAME> UI journey tests.
+[accessibility-statement-frontend](https://github.com/hmrc/accessibility-statement-frontend) UI journey tests.
 
 ## Pre-requisites
 
 ### Services
 
-Start Mongo Docker container as follows:
+Start `ACCESSIBILITY_STATEMENT_FRONTEND` services as follows:
 
 ```bash
-docker run --rm -d -p 27017:27017 --name mongo percona/percona-server-mongodb:5.0
-```
-
-Start `<SERVICE_MANAGER_PROFILE>` services as follows:
-
-```bash
-sm2 --start <SERVICE_MANAGER_PROFILE>
+sm2 --start ACCESSIBILITY_STATEMENT_FRONTEND
 ```
 
 ## Tests
