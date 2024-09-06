@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,14 +16,11 @@
 
 package uk.gov.hmrc.ui.pages
 
-import uk.gov.hmrc.selenium.component.PageObject
-import uk.gov.hmrc.selenium.webdriver.Driver
+import uk.gov.hmrc.configuration.TestEnvironment
 
-trait BasePage extends PageObject {
-  val url: String
-
-  def goTo(): Unit = get(url)
-
-  def pageTitle(): String = Driver.instance.getTitle
-
+object NotFoundPage extends BasePage {
+  val url: String = TestEnvironment.url(
+    "accessibility-statement-frontend"
+  ) + "/non-existent-page"
+  val title       = "This page can’t be found"
 }
